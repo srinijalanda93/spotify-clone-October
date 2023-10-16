@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400&family=Open+Sans&family=Poppins:wght@200;400&display=swap');
+#grid-1 {
+    background-color: blueviolet;
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 1fr 6fr;
+    grid-template-areas:
+      "h M"
+      "h M"
+      "h M";
+      box-sizing: border-box !important;
+  }
+  header {
+    grid-area: h;
+    background-color: rgb(0, 0, 0);
+    display:flex;
+    flex-direction: column;
+  }
+  main {
+    grid-area: M;
+    background:linear-gradient(30deg,rgb(48, 47, 47),rgb(53, 51, 51),rgb(49, 46, 46),rgb(20, 14, 14))
+  } 
+ .subheader-1 ul,.subheader-2 ul{
+  list-style-type: none;
+  padding-left:0px !important;
+ }
+
+ .subheader-1 ul > li img,
+.subheader-1 ul > li p {
+  display: inline-block;
+  padding-block: 5px;
+  padding-inline:5px;
+}
+.subheader-1 ul > li p,.subheader-2 ul > li p{
+  margin:0px !important;
+  color:white;
+}

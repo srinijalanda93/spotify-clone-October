@@ -44,8 +44,8 @@ main {
   color: white;
   font-size:17px;
 }
-.subheader-1 ul > li:hover img,
-.subheader-1 ul > li:hover p {
+.subheader-1 ul :hover 
+{
     cursor: pointer;
     border: none;
     border-radius: 10px;

@@ -24,7 +24,8 @@ main {
     rgb(48, 47, 47),
     rgb(53, 51, 51),
     rgb(49, 46, 46),
-    rgb(20, 14, 14));
+    rgb(20, 14, 14)
+  );
 }
 .subheader-1 ul,
 .subheader-2 ul {
@@ -42,13 +43,11 @@ main {
 .subheader-2 ul > li p {
   margin: 0px !important;
   color: white;
-  font-size:17px;
+  font-size: 17px;
 }
-.subheader-1 ul :hover 
-{
-    cursor: pointer;
-    border: none;
-    border-radius: 10px;
-    background-color: rgb(40, 40, 40);
+.subheader-1 ul :hover {
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(40, 40, 40);
 }
-

@@ -3,6 +3,7 @@
   overflow: hidden;
 } */
 #grid-1 {
+  background-color:black ;
   display: grid;
   width: 100vw;
   height: 100vh;
@@ -61,11 +62,19 @@ main {
 footer{
   background-color:#181818;
   position:sticky;
-  bottom:3px;
-  height:10vh;
+  bottom:0px;
+  top:0px;
+  height:13vh;
   width:100vw;
+  box-sizing:border-box;
 }
 .footer-playlist{
   display:flex;
   flex-direction:row;
+  align-items: center;
+  justify-content:space-between;
+}
+.song-name td{
+  margin: 0;
+  color: white !important;
 }

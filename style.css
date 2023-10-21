@@ -1,18 +1,12 @@
-
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400&family=Open+Sans&family=Poppins:wght@200;400&display=swap');
-/* body {
-  overflow: hidden;
-} */
-*{
- 
-font-family: 'Poppins', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400&family=Open+Sans&family=Poppins:wght@200;400&display=swap");
+/*  */
+* {
+  font-family: "Poppins", sans-serif;
 }
 #grid-1 {
   background-color: black;
   display: grid;
-  width: 100vw;
-  height: 100vh;
-  grid-template-columns: 2fr 9fr;
+  grid-template-columns: 20vw 80vw;
   grid-template-areas:
     "h M"
     "h M"
@@ -25,6 +19,7 @@ header {
   display: flex;
   flex-direction: column;
 }
+
 main {
   grid-area: M;
   background: linear-gradient(
@@ -35,10 +30,11 @@ main {
     rgb(20, 14, 14)
   );
 }
+
 .subheader-1 ul,
 .subheader-2 ul {
   list-style-type: none;
-  padding-left: 0px !important;
+  padding-left: 10px !important;
 }
 
 .subheader-1 ul > li img,
@@ -47,11 +43,14 @@ main {
   padding-block: 5px;
   padding-inline: 5px;
 }
+.subheader-1 ul > li img{
+  width:40px;
+}
 .subheader-1 ul > li p,
 .subheader-2 ul > li p {
   margin: 0px !important;
   color: white;
-  font-size: 17px;
+  font-size: 15px;
 }
 .subheader-1 ul :hover {
   cursor: pointer;
@@ -67,7 +66,7 @@ footer {
   position: sticky;
   bottom: 0px;
   top: 0px;
-  height: 13vh;
+  height: 12vh;
   width: 100vw;
   box-sizing: border-box;
 }
@@ -75,12 +74,19 @@ footer {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
+
 .song-name td {
   margin: 0;
   color: white !important;
-} 
+}
+.song-plays img{
+  width:450px;
+}
+.song-devices img{
+  width:200px; 
+}
 .upper-nav {
   display: flex;
   flex-direction: row;
@@ -90,7 +96,6 @@ footer {
   box-sizing: border-box;
   margin-left: 10px;
   margin-right: 10px;
-
 }
 
 .upper-nav #upper-nav1 > div > p {
@@ -98,38 +103,85 @@ footer {
   color: white;
   border-radius: 50%;
   background-color: #000;
-  font-size: 20px;
+  font-size: 17px;
   padding-inline: 10px;
 }
-#upper-nav2{
+#upper-nav2 {
   border-radius: 33px;
   background-color: #555151;
   box-sizing: border-box !important;
 }
-#upper-nav2 p  {
+#upper-nav2 p {
   margin: 0px !important;
   color: white;
 }
-.playlist-daily{
+.playlist-daily,
+.Artist-list {
   display: flex;
   flex-direction: column;
   margin-left: 4px;
   flex-wrap: wrap;
 }
-#playlist-daily-details{
-  width: 230px;
-height: 100px;
-border-radius: 4px;
-background: #1e1c1c;
+.playlist-daily-details,
+.Artist-list-details {
+  display: flex;
+  flex-direction: row;
 }
+.playlist-daily-details div {
+  width: 230px;
+  height: 50px;
+  border-radius: 4px;
+  background: #1e1c1c;
+  margin-inline: 5px;
+}
+.playlist-daily-details img {
+  width: 50px;
+  height: 50px;
+}
+.playlist-daily-details img,
+.playlist-daily-details p {
+  display: inline-block;
+}
+.Artist-list-details > div {
+  width: 150.29px;
+  height: 170.9px;
+  background: #181818;
+  border-radius: 14px;
+  margin-inline: 2.3px;
+}
+.Artist-list-details img {
+  width: 150px;
+  height: 120px;
+  border-radius: 14px;
+  margin-top: 3.5px;
+}
+.Artist-list-details > div > p{
+  margin-bottom: 0px !important;
+  font-size: 13px !important;
+  color: white;
+  padding-top:2.5px;
+  padding-inline: 5px;
+}
+.Artist-list-details > div > span{
+  font-size: 10px !important;
+  color:#B3B3B3;
+  padding-inline: 5px;
+}
+.playlist-daily-details > div p {
+  color: white;
+  margin-bottom: 0px !important;
+  padding-inline: 3px;
+}
+
 /* home css */
- .playlist-dualipa{
-  background: linear-gradient(180deg, #90AEA7 10%, #000);
+.playlist-dualipa {
+  background: linear-gradient(180deg, #90aea7 10%, #000);
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.playlist-dualipa>.playlist-details>p,.playlist-details>ul{
-  color:white;
-  margin-bottom:0px !important;
+.playlist-dualipa > .playlist-details > p,
+.playlist-details > ul {
+  color: white;
+  margin-bottom: 0px !important;
 }

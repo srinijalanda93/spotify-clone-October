@@ -3,6 +3,11 @@
 * {
   font-family: "Poppins", sans-serif;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 #grid-1 {
   background-color: black;
   display: grid;
@@ -18,6 +23,8 @@ header {
   background-color: rgb(0, 0, 0);
   display: flex;
   flex-direction: column;
+  overflow-y: auto; /* Make the header scrollable */
+  max-height: calc(100vh - 12vh); /* Add a maximum height to limit header height */
 }
 
 main {
@@ -29,7 +36,10 @@ main {
     rgb(49, 46, 46),
     rgb(20, 14, 14)
   );
+  overflow-y: auto; /* Make the main scrollable */
+  max-height: calc(100vh - 12vh); /* Subtract footer height from max-height */
 }
+
 
 .subheader-1 ul,
 .subheader-2 ul {
@@ -40,33 +50,42 @@ main {
 .subheader-1 ul > li img,
 .subheader-1 ul > li p {
   display: inline-block;
-  padding-block: 5px;
+  padding-block: 7px;
   padding-inline: 5px;
 }
-.subheader-1 ul > li img{
-  width:40px;
+
+.subheader-1 ul > li img {
+  width: 40px;
 }
+
 .subheader-1 ul > li p,
 .subheader-2 ul > li p {
   margin: 0px !important;
   color: white;
   font-size: 15px;
 }
+
+.subheader-2 ul > li p {
+  padding-block: 6px;
+}
+
 .subheader-1 ul :hover {
   cursor: pointer;
   border: none;
   border-radius: 10px;
   background-color: rgb(40, 40, 40);
 }
+
 .subheader-1 ul li > a {
   text-decoration: none;
 }
-footer {
+
+footer>div {
   background-color: #181818;
-  position: sticky;
+  position:sticky !important;
+  z-index: 1;
   bottom: 0px;
-  top: 0px;
-  height: 12vh;
+  max-height: 12vh;
   width: 100vw;
   box-sizing: border-box;
 }
@@ -92,10 +111,10 @@ footer {
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
-  margin-top: 10px;
-  box-sizing: border-box;
-  margin-left: 10px;
-  margin-right: 10px;
+  
+  margin:10px 10px 0px;
+  box-sizing: border-box !important;
+ 
 }
 
 .upper-nav #upper-nav1 > div > p {
@@ -114,6 +133,7 @@ footer {
 #upper-nav2 p {
   margin: 0px !important;
   color: white;
+  padding-inline:1.5px;
 }
 .playlist-daily,
 .Artist-list {
@@ -128,30 +148,32 @@ footer {
   flex-direction: row;
 }
 .playlist-daily-details div {
-  width: 230px;
-  height: 50px;
-  border-radius: 4px;
+  width: 290px;
+  height: 90px;
+  border-radius: 7px;
   background: #1e1c1c;
   margin-inline: 5px;
+  overflow: hidden !important;
 }
 .playlist-daily-details img {
-  width: 50px;
-  height: 50px;
+  width: 110px;
+  height: 90px;
 }
 .playlist-daily-details img,
 .playlist-daily-details p {
   display: inline-block;
 }
 .Artist-list-details > div {
-  width: 150.29px;
-  height: 170.9px;
+  width: 170.29px;
+  height: 200.9px;
   background: #181818;
   border-radius: 14px;
-  margin-inline: 2.3px;
+  margin-inline: 8.3px;
+  box-shadow: 0px 0px 2px rgba(227, 228, 222, 0.922);
 }
 .Artist-list-details img {
-  width: 150px;
-  height: 120px;
+  width: 170px;
+  height: 150px;
   border-radius: 14px;
   margin-top: 3.5px;
 }

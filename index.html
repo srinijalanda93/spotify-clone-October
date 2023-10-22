@@ -14,7 +14,7 @@
   </head>
   <body>
     <div id="grid-1">
-      <header>
+        <header> 
         <div class="pt-1 px-4">
           <img src="./assets/spotify_logo.svg" alt="spotify_logo" />
         </div>
@@ -61,7 +61,7 @@
             <li><p>EDM/Popular</p></li>
           </ul>
         </div>
-        <div class="subheader-1">
+        <div class="subheader-1 pt-1 px-3">
           <ul class="d-flex flex-column fw-normal" style="margin: 0px">
             <li>
               <img src="./assets/install_icon.svg" alt="install_icon" />
@@ -76,7 +76,7 @@
             <div class="mx-2"><p>></p></div>
             <div><p style="color: #7B7B7B;">></p></div>
           </div>
-          <div id="upper-nav2" class="d-flex justify-content-around">
+          <div id="upper-nav2" class="d-flex justify-content-around align-items-center">
            <img src="./assets/profile-img.svg" alt="profile">
            <p class="">Suga</p>
            <img class="pe-3" src="./assets/profile-drop.svg" alt="profile_dropdown">
@@ -88,10 +88,11 @@
             <div><img src="./assets/liked_playlist.svg" alt="liked_playlist"><p>Liked songs</p></div>
             <div><img src="./assets/Netflix_playlist.svg" alt="Netflix_playlist"><p>Neffex Playlist</p></div>
             <div><img src="./assets/KD.svg" alt="kd"><p>K/ DA</p></div>
-            <div><img src="./assets/liked_playlist.svg" alt="liked_playlist"><p>Liked songs</p></div>
+            
           </div>
           <div class="playlist-daily-details" >
             <div><img src="./assets/marshmello_playlist.svg" alt="marshmello_playlist"><p>Dance/Electronic Mix</p></div>
+            <div><img src="./assets/KD.svg" alt="kd"><p>K/ DA</p></div>
           </div>
         </section>   
         <section class="Artist-list mt-2">
@@ -102,7 +103,6 @@
            <div><img src="./assets/image3.svg" alt="image3"><p>Words beyond act..</p><span >Ben Ina Scott</span></div>
            <div><img src="./assets/image4.svg" alt="image4"><p>The Alexa Show</p><span >Ben Ina Scott</span></div>
            <div><img src="./assets/image2.svg" alt="image2"><p>MEDITATION SELF</p><span >Ben Ina Scott</span></div>
-           <div><img src="./assets/image1.svg" alt="image1"><p>Weekly Motivation</p><span >Ben Ina Scott</span></div>
           </div>
           <div class="Artist-list-details mt-2">
             <div><img src="./assets/image1.svg" alt="image1"><p>Weekly Motivation</p><span >Ben Ina Scott</span></div>
@@ -110,43 +110,53 @@
             <div><img src="./assets/image3.svg" alt="image3"><p>Words beyond act..</p><span >Ben Ina Scott</span></div>
             <div><img src="./assets/image4.svg" alt="image4"><p>The Alexa Show</p><span >Ben Ina Scott</span></div>
             <div><img src="./assets/image2.svg" alt="image2"><p>MEDITATION SELF</p><span >Ben Ina Scott</span></div>
+           
+           </div>
+           <div class="Artist-list-details mt-2">
             <div><img src="./assets/image1.svg" alt="image1"><p>Weekly Motivation</p><span >Ben Ina Scott</span></div>
+            <div><img src="./assets/image2.svg" alt="image2"><p>MEDITATION SELF</p><span >Ben Ina Scott</span></div>
+            <div><img src="./assets/image3.svg" alt="image3"><p>Words beyond act..</p><span >Ben Ina Scott</span></div>
+            
+           
            </div>
         </section>       
       </main>
+      <footer>
+        <div class="footer-playlist">
+          <div class="song-name d-flex flex-row align-items-center">
+            <img src="./assets/album_small.svg" alt="album_small" style="width:50px"/>
+            <table class="mx-1">
+              <tr>
+                <td class="fw-bold">Dreaming</td>
+              </tr>
+              <tr>
+                <td>NEFFEX</td>
+              </tr>
+            </table>
+            <img class="mx-2" src="./assets/greenheart.svg" alt="greenheart" />
+          </div>
+          <div class="song-plays mx-5">
+            <img
+              src="./assets/music_player_option.svg"
+              alt="music_player_option"
+            />
+          </div>
+          <div class="song-devices">
+            <img src="./assets/Right_option.svg" alt="Right_option" />
+          </div>
+        
+        </div>
+        <!-- keep the green inside -->
+        <div
+          style="background-color: #1ed760; height: 3vh; width: 100vw"
+          class="d-flex justify-content-end align-items-center pe-5"
+        >
+          <img src="./assets/speaker .svg" alt="speaker" />
+          <p style="margin: 0px" class="fw-bold">Listening on ASUS-ROG-G531GT</p>
+        </div>
+      </footer>
     </div>
-    <footer>
-      <div class="footer-playlist">
-        <div class="song-name d-flex flex-row align-items-center">
-          <img src="./assets/album_small.svg" alt="album_small" style="width:50px"/>
-          <table class="mx-1">
-            <tr>
-              <td class="fw-bold">Dreaming</td>
-            </tr>
-            <tr>
-              <td>NEFFEX</td>
-            </tr>
-          </table>
-          <img class="mx-2" src="./assets/greenheart.svg" alt="greenheart" />
-        </div>
-        <div class="song-plays mx-5">
-          <img
-            src="./assets/music_player_option.svg"
-            alt="music_player_option"
-          />
-        </div>
-        <div class="song-devices">
-          <img src="./assets/Right_option.svg" alt="Right_option" />
-        </div>
-      </div>
-      <div
-        style="background-color: #1ed760; height: 3vh; width: 100vw"
-        class="d-flex justify-content-end align-items-center pe-5"
-      >
-        <img src="./assets/speaker .svg" alt="speaker" />
-        <p style="margin: 0px" class="fw-bold">Listening on ASUS-ROG-G531GT</p>
-      </div>
-    </footer>
+  
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
       integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"

@@ -30,7 +30,7 @@ header {
 main {
   grid-area: M;
   background: linear-gradient(
-    30deg,
+    180deg,
     rgb(48, 47, 47),
     rgb(53, 51, 51),
     rgb(49, 46, 46),
@@ -202,8 +202,35 @@ footer>div {
   flex-direction: row;
   align-items: center;
 }
+.playlist-dualipa>.dualipa-img>img{
+  width:230px;
+  height:200px;
+}
 .playlist-dualipa > .playlist-details > p,
 .playlist-details > ul {
   color: white;
   margin-bottom: 0px !important;
+}
+
+.playlist-details > ul{
+  display: flex !important;
+  list-style-position:inside;
+  padding-left: 0px !important;
+
+}
+.playlist-details > ul>li{
+  padding-inline: 2px;
+  margin-left: 1px;
+}
+.playlist-section>div:first-child
+,.playlist-section>div:nth-child(2){
+  display:flex;
+  align-items: center;
+}
+.playlist-section>div:nth-child(2) p{
+  display:flex;
+  align-items: center;
+  margin-bottom: 0px !important;
+
+  color:white;
 }

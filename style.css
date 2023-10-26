@@ -223,14 +223,25 @@ footer>div {
   margin-left: 1px;
 }
 .playlist-section>div:first-child
-,.playlist-section>div:nth-child(2){
+{
   display:flex;
   align-items: center;
 }
-.playlist-section>div:nth-child(2) p{
-  display:flex;
-  align-items: center;
+.playlist-section>div:last-child>table>tr{
+margin-block: 10px;
+}
+.playlist-section > div:last-child > table tr:nth-child(2) {
+  background-color: #252727;
+  border-radius: 5px; 
+}
+.playlist-section > div:last-child > table tr:hover {
+  background-color: #252727;
+  border-radius: 5px; 
+}
+/* .playlist-section > div:last-child > table tr:first-child >td>s{
+color: #070707;
+} */
+.playlist-section > div:last-child > table tr:first-child >td>s>p{
+  letter-spacing: 4px !important;
   margin-bottom: 0px !important;
-
-  color:white;
 }

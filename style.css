@@ -312,31 +312,55 @@ color: #070707;
   .playlist-daily-details > div p {
     padding-inline: 6px !important;
   }
-  .Artist-list-details {
-    display: flex;
-    flex-direction: row !important;
-    flex-wrap: wrap;
-    align-items: center !important;
-    justify-content: center;
-  }
-  .Artist-list-details > div:last-child {
-    display: none;
-  }
-  .Artist-list-details > div:nth-last-child(2) {
-    display: none;
-  }
-
-  .Artist-list-details > div {
+ .Artist-list{
+  padding-bottom: 100px !important;
+ }
+.Artist-list >div:last-child
+ {
+  display: none;
+}
+.Artist-list >div:nth-child(3)
+ {
+  display: none;
+}
+ /* .Artist-list-details > div {
     margin-block: 5px;
+  } */
+  .Artist-list>.Artist-list-details{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
   }
-  footer > div {
+  .Artist-list-details{
+    width: 100vw !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+    max-height: 440px !important;
+  
+  }
+  
+  .Artist-list > .Artist-list-details:first-child > div {
+    margin-right: 10px; /* Add margin for spacing between items */
+  }
+  
+  
+
+ 
+  .footer-playlist{
     background-color: #181818;
-    position: sticky !important;
+    position: fixed !important;
     z-index: 1 !important;
     bottom: 0px !important;
-    max-height: 10vh;
+    height:15% !important;
     max-width: 767px;
     box-sizing: border-box;
+  }
+  footer>div:last-child{
+    background-color: #181818;
+    position: fixed !important;
+    z-index: 1 !important;
+    bottom: 0px !important;
+    height: 3% !important;
   }
   .song-devices {
     display: none;

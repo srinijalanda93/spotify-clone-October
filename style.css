@@ -24,7 +24,9 @@ header {
   display: flex;
   flex-direction: column;
   overflow-y: auto; /* Make the header scrollable */
-  max-height: calc(100vh - 12vh); /* Add a maximum height to limit header height */
+  max-height: calc(
+    100vh - 12vh
+  ); /* Add a maximum height to limit header height */
 }
 
 main {
@@ -40,7 +42,11 @@ main {
   max-height: calc(100vh - 12vh); /* Subtract footer height from max-height */
 }
 
-
+.subheader-1 > ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
 .subheader-1 ul,
 .subheader-2 ul {
   list-style-type: none;
@@ -80,9 +86,9 @@ main {
   text-decoration: none;
 }
 
-footer>div {
+footer > div {
   background-color: #181818;
-  position:sticky !important;
+  position: sticky !important;
   z-index: 1;
   bottom: 0px;
   max-height: 12vh;
@@ -100,21 +106,20 @@ footer>div {
   margin: 0;
   color: white !important;
 }
-.song-plays img{
-  width:450px;
+.song-plays img {
+  width: 450px;
 }
-.song-devices img{
-  width:200px; 
+.song-devices img {
+  width: 200px;
 }
 .upper-nav {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
-  
-  margin:10px 10px 0px;
+
+  margin: 10px 10px 0px;
   box-sizing: border-box !important;
- 
 }
 
 .upper-nav #upper-nav1 > div > p {
@@ -133,7 +138,7 @@ footer>div {
 #upper-nav2 p {
   margin: 0px !important;
   color: white;
-  padding-inline:1.5px;
+  padding-inline: 1.5px;
 }
 .playlist-daily,
 .Artist-list {
@@ -146,6 +151,7 @@ footer>div {
 .Artist-list-details {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 .playlist-daily-details div {
   width: 290px;
@@ -156,7 +162,6 @@ footer>div {
   overflow: hidden !important;
 }
 .playlist-daily-details img {
-  width: 110px;
   height: 90px;
 }
 .playlist-daily-details img,
@@ -166,10 +171,10 @@ footer>div {
 .Artist-list-details > div {
   width: 170.29px;
   height: 200.9px;
-  background: #181818;
+  background-color: #302f2f;
   border-radius: 14px;
   margin-inline: 8.3px;
-  box-shadow: 0px 0px 2px rgba(227, 228, 222, 0.922);
+  box-shadow: 0px 0px 1.89px rgba(81, 81, 81, 0.922);
 }
 .Artist-list-details img {
   width: 170px;
@@ -177,16 +182,16 @@ footer>div {
   border-radius: 14px;
   margin-top: 3.5px;
 }
-.Artist-list-details > div > p{
+.Artist-list-details > div > p {
   margin-bottom: 0px !important;
   font-size: 13px !important;
   color: white;
-  padding-top:2.5px;
+  padding-top: 2.5px;
   padding-inline: 5px;
 }
-.Artist-list-details > div > span{
+.Artist-list-details > div > span {
   font-size: 10px !important;
-  color:#B3B3B3;
+  color: #b3b3b3;
   padding-inline: 5px;
 }
 .playlist-daily-details > div p {
@@ -202,9 +207,9 @@ footer>div {
   flex-direction: row;
   align-items: center;
 }
-.playlist-dualipa>.dualipa-img>img{
-  width:230px;
-  height:200px;
+.playlist-dualipa > .dualipa-img > img {
+  width: 230px;
+  height: 200px;
 }
 .playlist-dualipa > .playlist-details > p,
 .playlist-details > ul {
@@ -212,36 +217,157 @@ footer>div {
   margin-bottom: 0px !important;
 }
 
-.playlist-details > ul{
+.playlist-details > ul {
   display: flex !important;
-  list-style-position:inside;
+  list-style-position: inside;
   padding-left: 0px !important;
-
 }
-.playlist-details > ul>li{
+.playlist-details > ul > li {
   padding-inline: 2px;
   margin-left: 1px;
 }
-.playlist-section>div:first-child
-{
-  display:flex;
+.playlist-section > div:first-child {
+  display: flex;
   align-items: center;
 }
-.playlist-section>div:last-child>table>tr{
-margin-block: 10px;
+.playlist-section > div:last-child > table > tr {
+  margin-block: 10px;
 }
 .playlist-section > div:last-child > table tr:nth-child(2) {
   background-color: #252727;
-  border-radius: 5px; 
+  border-radius: 5px;
 }
 .playlist-section > div:last-child > table tr:hover {
   background-color: #252727;
-  border-radius: 5px; 
+  border-radius: 5px;
 }
 /* .playlist-section > div:last-child > table tr:first-child >td>s{
 color: #070707;
 } */
-.playlist-section > div:last-child > table tr:first-child >td>s>p{
+.playlist-section > div:last-child > table tr:first-child > td > s > p {
   letter-spacing: 4px !important;
   margin-bottom: 0px !important;
+}
+/* media quries to index page */
+
+@media screen and (max-width: 767px) {
+  #grid-1 {
+    background-color: black; /* You can keep this if needed */
+    display: grid;
+    grid-template-rows: 15vw auto !important;
+    grid-template-areas:
+      "h h"
+      "M M";
+    box-sizing: border-box !important;
+    overflow-y: scroll !important;
+  }
+
+  header {
+    grid-area: h;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: row; /* Add this to make the divs display horizontally */
+  }
+  header > div:first-child {
+    padding-left: 1px !important;
+  }
+  header > div:nth-child(3) {
+    display: none;
+  }
+  header > div:nth-child(2) > ul {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: center !important;
+  }
+  header > div:nth-child(2) > ul > li {
+    padding-inline: 10px;
+  }
+  header > div:nth-child(2) > ul > li {
+    display: flex;
+    flex-direction: column;
+  }
+  header > div:nth-child(2) > ul > li > a {
+    display: flex;
+    flex-direction: column;
+  }
+  header > div:nth-child(4) {
+    display: none;
+  }
+  header > div:nth-child(5) {
+    display: none;
+  }
+  .playlist-daily-details {
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center !important;
+  }
+  .playlist-daily > h3,
+  .Artist-list > h5 {
+    text-align: center;
+  }
+  .playlist-daily-details > div {
+    margin-block: 5px !important;
+  }
+  .playlist-daily-details > div p {
+    padding-inline: 6px !important;
+  }
+  .Artist-list-details {
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    align-items: center !important;
+    justify-content: center;
+  }
+  .Artist-list-details > div:last-child {
+    display: none;
+  }
+  .Artist-list-details > div:nth-last-child(2) {
+    display: none;
+  }
+
+  .Artist-list-details > div {
+    margin-block: 5px;
+  }
+  footer > div {
+    background-color: #181818;
+    position: sticky !important;
+    z-index: 1 !important;
+    bottom: 0px !important;
+    max-height: 10vh;
+    max-width: 767px;
+    box-sizing: border-box;
+  }
+  .song-devices {
+    display: none;
+  }
+  .song-plays img {
+    width: 250px;
+  }
+  .playlist-dualipa {
+    display: flex;
+    flex-direction: column !important;
+    width: 500px;
+    align-items: center !important;
+    margin-inline: 100px;
+    border-radius: 5px;
+    box-sizing: border-box !important;
+  }
+  .dualipa-img {
+    box-sizing: border-box !important;
+  }
+  .dualipa-img > img {
+    width: 370px !important;
+    height: 250px !important;
+  }
+  .playlist-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .playlist-details > p {
+    text-align: center;
+    text-wrap: nowrap;
+  }
 }
